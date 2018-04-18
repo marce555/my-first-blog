@@ -41,7 +41,7 @@ body {
 }
 
 .post h1 a, .post h1 a:visited {
-    color: #000000;
+    color: #0174DF;
 }
 .post-form textarea {
     width: 100%;
@@ -50,4 +50,8 @@ body {
 .post {
     margin-bottom: 70px;
 }
+h1, h2, h3, h4 {
+	color: #0174DF
+}
+
 
