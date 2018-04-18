@@ -44,12 +44,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Applyou</a>
+          <a class="navbar-brand" href="{% url 'post_list' %}">Applyou</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li class="active"><a href="{% url 'post_list' %}">Home</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'post_new' %}">Ajouter un article</a></li>
+            {% endif %}
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -59,7 +61,7 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1> Django Girls Blog </h1>
+        
 
       <div class="content container">
             <div class="row">
