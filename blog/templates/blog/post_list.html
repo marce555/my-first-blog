@@ -1,7 +1,24 @@
 {% extends 'blog/base.html' %}
+{% load staticfiles %}
 
 {% block content %}
     {% for post in posts %}
+          <div class="post-preview">
+            <a href="{% static 'clean/post.html' %}">
+              <h2 class="post-title">
+              <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+              </h2>
+             <h3 class="post-subtitle">
+                Exemple de sous tître avec bootstrap
+              </h3>
+            </a>
+            <p class="post-meta">Publié par
+              <a href="#">{{ post.author }}</a>
+              le {{ post.published_date }}</p>
+          </div>
+    {% endfor %}
+   
+   <!-- {% for post in posts %}
         <div class="post">
             <div class="date">
                 {{ post.published_date }}
@@ -9,5 +26,6 @@
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
         </div>
-    {% endfor %}
+    {% endfor %}-->
+
 {% endblock %}

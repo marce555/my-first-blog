@@ -293,6 +293,12 @@ header.masthead .post-heading .meta a {
   margin: 0 0 10px;
 }
 
+.post-subtitle {
+  font-size: 22px;
+  font-weight: 300;
+  margin: 0 0 10px;
+}
+
 .post-preview > .post-meta {
   font-size: 18px;
   font-style: italic;
